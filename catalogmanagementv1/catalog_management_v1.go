@@ -2987,8 +2987,14 @@ func (catalogManagement *CatalogManagementV1) GetOfferingSourceWithContext(ctx c
 	if getOfferingSourceOptions.Channel != nil {
 		builder.AddQuery("channel", fmt.Sprint(*getOfferingSourceOptions.Channel))
 	}
+	if getOfferingSourceOptions.Flavor != nil {
+		builder.AddQuery("flavor", fmt.Sprint(*getOfferingSourceOptions.Flavor))
+	}
 	if getOfferingSourceOptions.AsIs != nil {
 		builder.AddQuery("asIs", fmt.Sprint(*getOfferingSourceOptions.AsIs))
+	}
+	if getOfferingSourceOptions.InstallType != nil {
+		builder.AddQuery("installType", fmt.Sprint(*getOfferingSourceOptions.InstallType))
 	}
 
 	request, err := builder.Build()
@@ -11683,9 +11689,15 @@ type GetOfferingSourceOptions struct {
 	// The channel value of the specified version.
 	Channel *string `json:"channel,omitempty"`
 
+	// The programmatic flavor name of the specified version.
+	Flavor *string `json:"flavor,omitempty"`
+
 	// If false (the default), the root folder from the original onboarded tgz file is removed.  If true, the root folder
 	// is returned.
 	AsIs *bool `json:"asIs,omitempty"`
+
+	// The install type of the specified version.
+	InstallType *string `json:"installType,omitempty"`
 
 	// Allows users to set headers on API requests
 	Headers map[string]string
@@ -11740,9 +11752,21 @@ func (_options *GetOfferingSourceOptions) SetChannel(channel string) *GetOfferin
 	return _options
 }
 
+// SetFlavor : Allow user to set Flavor
+func (_options *GetOfferingSourceOptions) SetFlavor(flavor string) *GetOfferingSourceOptions {
+	_options.Flavor = core.StringPtr(flavor)
+	return _options
+}
+
 // SetAsIs : Allow user to set AsIs
 func (_options *GetOfferingSourceOptions) SetAsIs(asIs bool) *GetOfferingSourceOptions {
 	_options.AsIs = core.BoolPtr(asIs)
+	return _options
+}
+
+// SetInstallType : Allow user to set InstallType
+func (_options *GetOfferingSourceOptions) SetInstallType(installType string) *GetOfferingSourceOptions {
+	_options.InstallType = core.StringPtr(installType)
 	return _options
 }
 
@@ -17688,6 +17712,9 @@ type SolutionInfo struct {
 
 	// Dependencies for this solution.
 	Dependencies []OfferingReference `json:"dependencies,omitempty"`
+
+	// The install type for this solution.
+	InstallType *string `json:"install_type,omitempty"`
 }
 
 // UnmarshalSolutionInfo unmarshals an instance of SolutionInfo from the specified map of raw messages.
@@ -17706,6 +17733,10 @@ func UnmarshalSolutionInfo(m map[string]json.RawMessage, result interface{}) (er
 		return
 	}
 	err = core.UnmarshalModel(m, "dependencies", &obj.Dependencies, UnmarshalOfferingReference)
+	if err != nil {
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "install_type", &obj.InstallType)
 	if err != nil {
 		return
 	}

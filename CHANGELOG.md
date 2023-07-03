@@ -1,3 +1,66 @@
+# [0.40.0](https://github.com/IBM/platform-services-go-sdk/compare/v0.39.0...v0.40.0) (2023-06-12)
+
+
+### Features
+
+* **IAM Identity:** add trusted profile identities API ([#262](https://github.com/IBM/platform-services-go-sdk/issues/262)) ([b4dcf90](https://github.com/IBM/platform-services-go-sdk/commit/b4dcf904d30f6a61069f1828a3bf91e927063dea))
+
+# [0.39.0](https://github.com/IBM/platform-services-go-sdk/compare/v0.38.1...v0.39.0) (2023-06-01)
+
+
+### Features
+
+* **Usage Reports:** Update Account Summary ([#261](https://github.com/IBM/platform-services-go-sdk/issues/261)) ([eff265b](https://github.com/IBM/platform-services-go-sdk/commit/eff265b767c288a5e59c904474790874958408b6))
+
+## [0.38.1](https://github.com/IBM/platform-services-go-sdk/compare/v0.38.0...v0.38.1) (2023-05-25)
+
+
+### Bug Fixes
+
+* **Catalog Management:** regen service after recent API changes ([#260](https://github.com/IBM/platform-services-go-sdk/issues/260)) ([5b794bc](https://github.com/IBM/platform-services-go-sdk/commit/5b794bc16efc33c2e7c6d76a03cf03d1abee7c0e))
+
+# [0.38.0](https://github.com/IBM/platform-services-go-sdk/compare/v0.37.4...v0.38.0) (2023-05-25)
+
+
+### Features
+
+* **Metrics Router:** add new Metrics Router service to project ([#225](https://github.com/IBM/platform-services-go-sdk/issues/225)) ([6eb402a](https://github.com/IBM/platform-services-go-sdk/commit/6eb402a4890161484944a61517dbe97b405a50c1))
+
+## [0.37.4](https://github.com/IBM/platform-services-go-sdk/compare/v0.37.3...v0.37.4) (2023-05-05)
+
+
+### Bug Fixes
+
+* **deps:** bump various dependencies ([#256](https://github.com/IBM/platform-services-go-sdk/issues/256)) ([450de25](https://github.com/IBM/platform-services-go-sdk/commit/450de25feb7d25990a837c4f390f1557814e667e))
+
+## [0.37.3](https://github.com/IBM/platform-services-go-sdk/compare/v0.37.2...v0.37.3) (2023-04-28)
+
+
+### Bug Fixes
+
+* **Global Search:** remove deprecated method getSupportedTypes ([#253](https://github.com/IBM/platform-services-go-sdk/issues/253)) ([3d3307c](https://github.com/IBM/platform-services-go-sdk/commit/3d3307cfaf18079ca8e62e847004541728a9734a))
+
+## [0.37.2](https://github.com/IBM/platform-services-go-sdk/compare/v0.37.1...v0.37.2) (2023-04-27)
+
+
+### Bug Fixes
+
+* **Example Service:** re-gen service after traits schema change ([#250](https://github.com/IBM/platform-services-go-sdk/issues/250)) ([92d698c](https://github.com/IBM/platform-services-go-sdk/commit/92d698c046f32d0392030e33f4804ef957451aab))
+
+## [0.37.1](https://github.com/IBM/platform-services-go-sdk/compare/v0.37.0...v0.37.1) (2023-04-27)
+
+
+### Bug Fixes
+
+* **Global Catalog:** avoid unmarshalling error ([#251](https://github.com/IBM/platform-services-go-sdk/issues/251)) ([db31348](https://github.com/IBM/platform-services-go-sdk/commit/db31348f12a624d9444261585f77dfb211e1cb73))
+
+# [0.37.0](https://github.com/IBM/platform-services-go-sdk/compare/v0.36.0...v0.37.0) (2023-04-27)
+
+
+### Features
+
+* **Catalog Management:** re-gen service after recent API changes ([#249](https://github.com/IBM/platform-services-go-sdk/issues/249)) ([3b5367b](https://github.com/IBM/platform-services-go-sdk/commit/3b5367be3070455bdd1c13994a2b1e64c9dadcee))
+
 # [0.36.0](https://github.com/IBM/platform-services-go-sdk/compare/v0.35.1...v0.36.0) (2023-04-21)
 
 
